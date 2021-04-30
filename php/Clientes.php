@@ -54,7 +54,6 @@ class Clientes {
         $envioCliente = mail($paraC, $assuntoC, $mensagemC, $headersC);  //função que faz o envio do email.
     
         if($envioCliente){
-            $_SESSION['email_enviado'] = "";
             echo ("<SCRIPT LANGUAGE='JavaScript'>
             window.location.href='".$destino."';
             </SCRIPT>");
