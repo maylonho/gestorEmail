@@ -52,7 +52,7 @@ class Clientes {
     
         $envioCliente = mail($paraC, $assuntoC, $mensagemC, $headersC);  //função que faz o envio do email.
     
-        if($envio){
+        if($envioCliente){
             echo ("<SCRIPT LANGUAGE='JavaScript'>
             window.location.href='../obrigado.html';
             </SCRIPT>");
