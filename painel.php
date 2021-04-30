@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./php/Clientes.php");
 $cliente = new Clientes();
 
@@ -54,6 +55,18 @@ $cliente = new Clientes();
           </div>
         </div>
     </nav>
+
+    <?php
+                  if(isset($_SESSION['email_enviado'])):
+              ?>
+                  <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+                    <strong>Feito!</strong> Foi enviado o lembrete para o Cliente!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+              <?php
+                  endif;
+                  unset($_SESSION['email_enviado']);
+              ?>
 
     <div class="container-fluid">
         <div class="row">
