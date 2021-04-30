@@ -5,6 +5,5 @@ include("Clientes.php");
 $cliente = new Clientes();
 $email = $_GET['email'];
 
-echo $email;
-$cliente->enviarEmailCliente($email, '../painel.html');
+$cliente->enviarEmailCliente($email, '../painel.php');
 

@@ -81,7 +81,7 @@ $cliente = new Clientes();
                 <?php
                     if(isset($_SESSION['email_enviado'])):
                 ?>
-                    <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show mt-1" role="alert">
                       <strong>Feito!</strong> Foi enviado o lembrete para o Cliente!
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
@@ -89,7 +89,7 @@ $cliente = new Clientes();
                     endif;
                     unset($_SESSION['email_enviado']);
                 ?>      
-                          
+
                 <div class="container-fluid">
                     <?php
                       $cliente->mostrarCliente();
