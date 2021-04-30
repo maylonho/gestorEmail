@@ -2,9 +2,7 @@
 include('Conexao.php');
 include("Clientes.php");
 
-$email = $_GET['email'];
 $cliente = new Clientes();
-
+$email = $_GET['email'];
 $cliente->enviarEmailCliente($email);
-
 
