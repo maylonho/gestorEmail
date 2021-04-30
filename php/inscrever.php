@@ -12,7 +12,7 @@ $cliente->enviarEmailCliente($email);
 
 
 //Gravar no Banco de Dados
-//$cliente->cadastrarCliente();
+$cliente->cadastrarCliente();
 
 
 header("Location: ../obrigado.html");
