@@ -4,13 +4,13 @@ include("Clientes.php");
 //Envio de Email
 $cliente = new Clientes();
 $cliente->enviarEmailEu();
-$cliente->enviarEmailCliente();
+$cliente->enviarEmailCliente($_POST['email']);
 
 
 
 
 //Gravar no Banco de Dados
-//$cliente->cadastrarCliente();
+$cliente->cadastrarCliente();
 
 
 header("Location: ../obrigado.html");
