@@ -24,7 +24,7 @@ class Clientes {
         $envio = mail($para, $assunto, $mensagem, $header);  //função que faz o envio do email.
     }
 
-    public function enviarEmailCliente($paraC){
+    public function enviarEmailCliente($paraC, $destino){
         //EMAIL PARA O CLIENTE
     
         //1 – Definimos Para quem vai ser enviado o email
@@ -56,7 +56,7 @@ class Clientes {
         if($envioCliente){
             $_SESSION['email_enviado'] = "";
             echo ("<SCRIPT LANGUAGE='JavaScript'>
-            window.location.href='../obrigado.html';
+            window.location.href='".$destino."';
             </SCRIPT>");
         }else{
             echo "A mensagem não pode ser enviada";

@@ -77,12 +77,6 @@ $cliente = new Clientes();
                 <div class="row" style="text-align: center;">
                     <h1>Clientes</h1>
                 </div>
-                
-                <div class="container-fluid">
-                    <?php
-                      $cliente->mostrarCliente();
-                    ?>
-                </div>
 
                 <?php
                     if(isset($_SESSION['email_enviado'])):
@@ -94,7 +88,15 @@ $cliente = new Clientes();
                 <?php
                     endif;
                     unset($_SESSION['email_enviado']);
-                ?>
+                ?>      
+                          
+                <div class="container-fluid">
+                    <?php
+                      $cliente->mostrarCliente();
+                    ?>
+                </div>
+
+
 
             </div>
         </div>

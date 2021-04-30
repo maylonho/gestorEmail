@@ -6,7 +6,7 @@ $cliente = new Clientes();
 $cliente->enviarEmailEu();
 
 $email = $_POST['email'];
-$cliente->enviarEmailCliente($email);
+$cliente->enviarEmailCliente($email, '../obrigado.html');
 
 
 
