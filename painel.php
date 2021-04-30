@@ -88,6 +88,17 @@ $cliente = new Clientes();
                 <?php
                     endif;
                     unset($_SESSION['email_enviado']);
+                ?>   
+                <?php
+                    if(isset($_SESSION['email_apagado'])):
+                ?>
+                    <div class="alert alert-danger alert-dismissible fade show mt-1" role="alert">
+                      <strong>Feito!</strong> Cliente apagado com sucesso!
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php
+                    endif;
+                    unset($_SESSION['email_apagado']);
                 ?>      
 
                 <div class="container-fluid">
