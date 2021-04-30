@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("./php/Clientes.php");
 $cliente = new Clientes();
 
@@ -60,7 +59,7 @@ $cliente = new Clientes();
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 d-flex justify-content-center" style="background-color: aqua; min-height: 100vh;">
+            <div class="col-md-2 d-flex justify-content-center painel_menu">
                 <ul class="nav flex-column" style="text-align: center;">
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#">Clientes</a>
@@ -73,7 +72,7 @@ $cliente = new Clientes();
                     </li>
                 </ul>                
             </div>
-            <div class="col-md-10" style="background-color: cadetblue; min-height: 100vh;">
+            <div class="col-md-10 painel_conteudo">
                 <div class="row" style="text-align: center;">
                     <h1>Clientes</h1>
                 </div>
@@ -88,18 +87,20 @@ $cliente = new Clientes();
                 <?php
                     endif;
                     unset($_SESSION['email_enviado']);
-                ?>   
+                ?>      
+
+
                 <?php
                     if(isset($_SESSION['email_apagado'])):
                 ?>
                     <div class="alert alert-danger alert-dismissible fade show mt-1" role="alert">
-                      <strong>Feito!</strong> Cliente apagado com sucesso!
+                      <strong>Feito!</strong> O cliente foi apagado com sucesso!
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php
                     endif;
                     unset($_SESSION['email_apagado']);
-                ?>      
+                ?>                      
 
                 <div class="container-fluid">
                     <?php

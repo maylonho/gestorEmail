@@ -1,5 +1,6 @@
 <?php
 include('Conexao.php');
+session_start();
 $idCliente = $_GET['id'];
 
 $sql = "DELETE FROM usuario WHERE id_usuario='$idCliente'";

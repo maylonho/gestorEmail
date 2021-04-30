@@ -69,7 +69,7 @@ class Clientes {
         $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
         $tel = mysqli_real_escape_string($conexao, trim($_POST['tel']));
         
-        $sql = "INSERT INTO usuario (tel_usuario, email_usuario) VALUES ('$tel', '$email')";
+        $sql = "INSERT INTO usuario (data_cad, tel_usuario, email_usuario) VALUES (NOW() ,'$tel', '$email')";
         if($conexao->query($sql) === TRUE) {
             $_SESSION['cad_usuario_realizado'] = true;
         } 
@@ -87,17 +87,21 @@ class Clientes {
             echo '
             
             <div class="row cliente">
-                <div class="col-md-4 cliente-dados">
-                    '.$row['tel_usuario'].'
+                <div class="col-md-3 cliente-dados">
+                    '.$row['data_cad'].'
                 </div>
-                <div class="col-md-5 cliente-dados">
+                <div class="col-md-3 cliente-dados">
+                    '.$row['tel_usuario'].'
+                </div>                
+                <div class="col-md-3 cliente-dados">
                     '.$row['email_usuario'].'
                 </div>
                 <div class="col-md-1 cliente-dados">
                     <span id="btnExcluir" onmouseover=setAttribute("id","btnOn") onmouseout=setAttribute("id","btnOff") onclick=location.href="php/apagarCliente.php?id='.$row['id_usuario'].'"; style="font-size: 1.5em; cursor: pointer;"><i class="fa fa-trash"></i></i></span>
                 </div>
                 <div class="col-md-2 cliente-dados">
-                    <button onclick=location.href="php/enviarEmailCliente.php?email='.$row['email_usuario'].'"; type="button" class="btn btn-primary">Lembrar</button>
+                    <button onclick=location.href="php/enviarEmailCliente.php?email='.$row['email_usuario'].'&id='.$row['id_usuario'].'&lem='.$row['lembrado'].'"; type="button" class="btn btn-primary">Lembrar</button> 
+                    '.$row['lembrado'].'
                 </div>
             </div>     
             ';       

@@ -1,12 +1,22 @@
+.painel_menu{
+    background-color: rgb(177, 177, 177);
+    min-height: 100vh;
+}
+.painel_conteudo{
+    background-color: rgb(238, 238, 238);
+    min-height: 100vh;
+}
+
 .cliente{
     border: 1px solid #ccc;
     padding: 5px;
 }
 .cliente-dados{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
 
 #btnExcluir{
     color: rgb(255, 50, 50);
