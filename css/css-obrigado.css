@@ -1,0 +1,79 @@
+
+@media only screen and (max-width:700px){
+    /*Conteudo será carregado sempre que a tela for menor que 700px*/
+    .colunaemail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .img .email{
+        display: none;
+    }
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: rgb(187, 187, 187);
+    overflow-x: hidden;
+}
+
+.msg{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+h1{
+    color: black;
+}
+
+h4{
+    color: rgb(143, 143, 143);
+    margin-bottom: 20px;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.img .like{
+    width: 100px;
+}
+
+.img .email{
+    width: 300px;
+    padding-right: 10vw;
+}
+
+.colunaemail{
+    display: flex;
+    padding: 30px;
+}
+
+.msgzap{
+    width: 300px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+button{
+    margin-top: 15px;
+    height: 60px;
+    width: 310px;
+    background-color: rgb(214, 115, 22);
+    color: white;
+    cursor: pointer;
+}

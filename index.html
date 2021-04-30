@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Curso de Marketing Digital</title>
+
+
+
+</head>
+<body>
+    
+    <!--Scrip para mascara de telefone--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <div class="back">
+        <img class="back" src="img/back.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="titulo">
+            <h1><a href="php/inscrever.php">Gratuito</a>  - Como fazer a sua Primeira Venda como afiliado</h1>
+            <h5>Clique no botão abaixo para se increver e aprender passo a passo para se tornar um afiliado profissional</h5>
+            <form action="php/inscrever.php" method="POST">
+                <input name="email" type="email" placeholder="Insira seu E-mal" required>
+                <input name="tel" id="tel" type="tel" placeholder="Telefone ou WhatsApp" required>
+                <script type="text/javascript">
+                    $("#tel").mask("(00) 00009-0000");
+                </script>
+                <button>QUERO ME INSCREVER</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
